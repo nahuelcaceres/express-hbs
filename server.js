@@ -34,6 +34,6 @@ app.get('/data', (req, res) =>{
 
 });
 
-app.listen(proces.PORT || 3000,() =>{
+app.listen(process.PORT || 3000,() =>{
     console.log(`Servidor escuchando en el puerto ${ port }`);
 });

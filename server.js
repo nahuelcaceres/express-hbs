@@ -4,7 +4,7 @@ const hbs = require('hbs');
 
 require('./hbs/helpers');
 
-const port = process.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/public'));
 
@@ -34,6 +34,6 @@ app.get('/data', (req, res) =>{
 
 });
 
-app.listen(process.PORT || 3000,() =>{
+app.listen(process.env.PORT || 3000,() =>{
     console.log(`Servidor escuchando en el puerto ${ port }`);
 });
